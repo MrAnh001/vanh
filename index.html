@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Bài Tập</title>
+    <style>
+        /* Thiết lập font, margin, padding cho body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e3f2fd; /* Màu nền mới */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Banner với ảnh nền mới */
+        .banner {
+            background-image: url("https://vnpik.com/wp-content/uploads/2024/12/1OXGa-bglDxpbYP19iz6X5S_Qy925toQA.jpeg");
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        /* Thanh menu điều hướng dưới banner */
+        nav {
+            background-color: #333;
+            width: 100%;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Nội dung chính */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            margin: 20px;
+            margin-top: 20px;
+        }
+
+        /* Cột phải: Bảng bài tập */
+        .right-column {
+            width: 90%; /* Thay đổi để cột này chiếm nhiều không gian hơn */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+        }
+
+        /* Các hiệu ứng cho phần nội dung */
+        .content-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Báo Cáo Bài Tập</h1>
+        <p>Trang web học tập về các bài tập tin học 12</p>
+    </div>
+
+    <!-- Menu điều hướng dưới banner -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/ptbac2.html')">Giải phương trình</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/cadao.html')">Ca Dao Tục Ngữ</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/clb.html')">Câu lạc bộ</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/bangmaucss.html')">Bảng màu CSS</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/dsmonhoc.html')">Danh Sách Môn Học</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('empty/gioithieuhdngoaikhoa.html')">Giới Thiệu HĐ Ngoại Khóa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <!-- Cột phải: Bảng bài tập -->
+        <div class="right-column">
+            <div class="content-section" id="content">
+                <!-- Nội dung bài tập sẽ được tải ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadContent(url) {
+            var contentArea = document.getElementById('content');
+            contentArea.innerHTML = '<iframe src="' + url + '" frameborder="0"></iframe>';
+        }
+    </script>
+
+</body>
+
+</html>
